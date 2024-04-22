@@ -1,6 +1,7 @@
 # Twoje Auto - Markowy Komis Samochodowy
 ### Your Car - Branded Car Dealership
 
+
 ## General info
 The aplication presents possibilities of the JavaScript programming language in building a modern website for purchasing a car.
 
@@ -18,7 +19,7 @@ All inscriptions on the website are in Polish.
 
 ## Running the page
 To run this project:
-* click this [link](https://piterbud.github.io/Calendar-Photos-2024/) or 
+* click this [link](https://piterbud.github.io/Twoje-Auto/) or 
 * open the index.html file in your web browser after cloning the repository
 
 ## Technologies
