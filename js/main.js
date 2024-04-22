@@ -120,46 +120,42 @@ function showCarsMake(carMake) {
     arrayOfCarsToSort = arrayOfFilteredCars;
 }
 
-let searchCounter = 0;
 const $carsSearchList = document.getElementById("cars_search_list");
-$carsSearchList.addEventListener("click", () => {
-    searchCounter++;
-    if (searchCounter % 2 === 0) {
-        switch ($carsSearchList.value) {
-            case "0": $listOfCars.forEach(item => item.remove());
-                    removeCarsSymbols();
-                    showCars();
-                    showCarsSymbols("Audi", "BMW", "Citroen", "Ford", "Opel", "Peugeot", "Renault");
-                    break;
-            case "1": showCarsMake("Audi");
-                    removeCarsSymbols();
-                    showCarsSymbols("Audi", "Audi", "Audi");
-                    break;
-            case "2": showCarsMake("BMW");
-                    removeCarsSymbols();
-                    showCarsSymbols("BMW", "BMW", "BMW");
-                    break;
-            case "3": showCarsMake("Citroen");
-                    removeCarsSymbols();
-                    showCarsSymbols("Citroen", "Citroen", "Citroen");
-                    break;
-            case "4": showCarsMake("Ford");
-                    removeCarsSymbols();
-                    showCarsSymbols("Ford", "Ford", "Ford");
-                    break;
-            case "5": showCarsMake("Opel");
-                    removeCarsSymbols();
-                    showCarsSymbols("Opel", "Opel", "Opel");
-                    break;
-            case "6": showCarsMake("Peugeot");
-                    removeCarsSymbols();
-                    showCarsSymbols("Peugeot", "Peugeot", "Peugeot");
-                    break;
-            case "7": showCarsMake("Renault");
-                    removeCarsSymbols();
-                    showCarsSymbols("Renault", "Renault", "Renault");
-                    break;
-        }
+$carsSearchList.addEventListener("change", () => {
+    switch ($carsSearchList.value) {
+        case "0": $listOfCars.forEach(item => item.remove());
+                removeCarsSymbols();
+                showCars();
+                showCarsSymbols("Audi", "BMW", "Citroen", "Ford", "Opel", "Peugeot", "Renault");
+                break;
+        case "1": showCarsMake("Audi");
+                removeCarsSymbols();
+                showCarsSymbols("Audi", "Audi", "Audi");
+                break;
+        case "2": showCarsMake("BMW");
+                removeCarsSymbols();
+                showCarsSymbols("BMW", "BMW", "BMW");
+                break;
+        case "3": showCarsMake("Citroen");
+                removeCarsSymbols();
+                showCarsSymbols("Citroen", "Citroen", "Citroen");
+                break;
+        case "4": showCarsMake("Ford");
+                removeCarsSymbols();
+                showCarsSymbols("Ford", "Ford", "Ford");
+                break;
+        case "5": showCarsMake("Opel");
+                removeCarsSymbols();
+                showCarsSymbols("Opel", "Opel", "Opel");
+                break;
+        case "6": showCarsMake("Peugeot");
+                removeCarsSymbols();
+                showCarsSymbols("Peugeot", "Peugeot", "Peugeot");
+                break;
+        case "7": showCarsMake("Renault");
+                removeCarsSymbols();
+                showCarsSymbols("Renault", "Renault", "Renault");
+                break;
     }
 });
 
@@ -184,21 +180,17 @@ function showSortedCars(sortingCategory) {
     listOfCarsEventListener();
 }
 
-let sortCounter = 0;
 const $carsSortList = document.getElementById("cars_sort_list");
-$carsSortList.addEventListener("click", () => {
-    sortCounter++;
-    if (sortCounter % 2 === 0) {
-        switch ($carsSortList.value) {
-            case "1": showSortedCars("lowPrice");
-                    break;
-            case "2": showSortedCars("highPrice");
-                    break;
-            case "3": showSortedCars("lowMileage");
-                    break;
-            case "4": showSortedCars("highMileage");
-                    break;
-        }
+$carsSortList.addEventListener("change", () => {
+    switch ($carsSortList.value) {
+        case "1": showSortedCars("lowPrice");
+                break;
+        case "2": showSortedCars("highPrice");
+                break;
+        case "3": showSortedCars("lowMileage");
+                break;
+        case "4": showSortedCars("highMileage");
+                break;
     }
 });
 
