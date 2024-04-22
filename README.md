@@ -1,7 +1,6 @@
-```
 # Twoje Auto - Markowy Komis Samochodowy
 ### Your Car - Branded Car Dealership
-```
+
 
 ## General info
 The aplication presents possibilities of the JavaScript programming language in building a modern website for purchasing a car.
