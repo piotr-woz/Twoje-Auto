@@ -542,7 +542,7 @@ function showSummary() {
         setTimeout(printSummaryText, 25);
     }
 
-    // animation responsiveness for a wide panorama
+    // animation responsiveness for a wide panorama (between 992 and 1400px)
     const $summaryOfPurchaseText = document.querySelectorAll(".summary_of_purchase_texts p");
     const $summaryOfPurchaseTexts = document.querySelector(".summary_of_purchase_texts");
     
@@ -555,18 +555,22 @@ function showSummary() {
         $summaryOfPurchaseTexts.style.left = "115%";
         $summaryOfPurchaseTexts.style.width = "75%";
     }
-    const responsivePano = () => {
-        if ((window.innerWidth / window.innerHeight) > 1.96) {
-            $summaryOfPurchaseCarImg.style.width = "75%";
-            $summaryOfPurchaseCarImg.style.position = "relative";
-            $summaryOfPurchaseCarImg.style.left = "5%";
-            newScreenLayout();
-        } else if ((window.innerWidth / window.innerHeight) > 1.79) {
-            newScreenLayout();
-        } else if ((window.innerWidth / window.innerHeight) > 1.77) {
-            $summaryOfPurchaseText.forEach(item => item.style.margin = "3px 0");
+    function responsivePano () {
+        if (window.innerWidth < 1400) {
+            if ((window.innerWidth / window.innerHeight) > 1.96) {
+                newScreenLayout();
+                $summaryOfPurchaseCarImg.style.width = "75%";
+                $summaryOfPurchaseCarImg.style.position = "relative";
+                $summaryOfPurchaseCarImg.style.left = "5%";
+            } else if ((window.innerWidth / window.innerHeight) > 1.79) {
+                newScreenLayout();
+            } else if ((window.innerWidth / window.innerHeight) > 1.77) {
+                $summaryOfPurchaseText.forEach(item => item.style.margin = "3px 0");
+            }
         }
     }
+
+    console.log(window.innerWidth, window.innerHeight);
 
     // calling the summary function
     if (window.innerWidth > 992) {
