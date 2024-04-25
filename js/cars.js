@@ -30,3 +30,4 @@ const carsArray = [
     {make: "Audi", model: "A4", year: 2019, mileage: 144758, power: "150 KM", fuel: "Benzyna", price: 108000, id: "audiA4"},
     {make: "Audi", model: "Q7", year: 2015, mileage: 192285, power: "218 KM", fuel: "Diesel", price: 153900, id: "audiQ7"},
  ];
+ 
