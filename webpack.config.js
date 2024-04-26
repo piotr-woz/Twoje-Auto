@@ -8,8 +8,7 @@ module.exports = {
     },
 }
 
-// npm init -y
-// npm install webpack webpack-cli --save-dev
-// npm run build
 
-// npm install - przywrócenie katalogu "node_modules"
+// npm init
+// npm install webpack webpack-cli --save-dev
+// npm run build:prod
