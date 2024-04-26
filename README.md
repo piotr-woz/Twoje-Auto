@@ -20,7 +20,7 @@ All inscriptions on the website are in Polish.
 ## Running the page
 To run this project:
 * click this [link](https://piterbud.github.io/Twoje-Auto/) or 
-* open the index.html file in your web browser after cloning the repository
+* open the index.html file on your local server (for example use Live Server extension in VSC)
 
 ## Technologies
 Project is created with:

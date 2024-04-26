@@ -1,3 +1,6 @@
+import { $chosenCarForm, $dateInput, chosenCar_id, chosenCar_make_model } from "./form.js";
+import { priceWithSpaces } from "./main.js";
+
 // presentation of the summary
 function showSummary() {
     if (showSummary.done) { return; }
@@ -54,7 +57,7 @@ function showSummary() {
 
     summaryTexts.push(`Dziękujemy za zakup samochodu ${chosenCar_make_model}`);
     summaryTexts.push(`Auto zostanie dostarczone ${changeDateFormat($dateInput.value)}`);
-    summaryTexts.push(`Wybrana metoda płatności: ${radioButtonChoice}`);
+    summaryTexts.push(`Wybrana metoda płatności: ${localStorage.getItem("value")}`);
     summaryTexts.push(`Cena auta wraz z akcesoriami: ${priceWithSpaces(localStorage.getItem("totalPrice"))}`);
 
     let activeLetter = -4;
@@ -115,3 +118,5 @@ function showSummary() {
     localStorage.clear();
     showSummary.done = true;
 }
+
+export default showSummary;

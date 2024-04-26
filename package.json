@@ -1,0 +1,18 @@
+{
+  "name": "twoje-auto",
+  "version": "1.0.0",
+  "description": "The aplication presents possibilities of the JavaScript programming language in building a modern website for purchasing a car.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=none",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

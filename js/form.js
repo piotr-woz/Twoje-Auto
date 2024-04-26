@@ -1,3 +1,13 @@
+import showSummary from "./summary.js";
+import { $mainPage, $listOfCars, priceWithSpaces } from "./main.js";
+
+const $chosenCarForm = document.querySelector(".chosen_car_form");
+const $dateInput = document.querySelector("#date");
+let chosenCar_id;
+let chosenCar_make_model;
+
+export { $chosenCarForm, $dateInput, chosenCar_id, chosenCar_make_model };
+
 // presentation of the form
 function showForm() {
     const $headerButton = document.querySelector(".header_button");
@@ -6,6 +16,8 @@ function showForm() {
     const $carsSearchBanner = document.querySelector(".cars_search_banner");
     const $footer = document.querySelector("footer");
 
+    const $nameInput = document.querySelector("#name");
+    const $addressInput = document.querySelector("#address");
     const $chosenCarFormImg = document.querySelector("#chosen_car_form_img");
     const $chosenCarMainForm = document.querySelector("#chosen_car_main_form");
     const $chosenCarText = document.querySelector("#chosen_car_text_form p:nth-of-type(1)");
@@ -187,16 +199,7 @@ function showForm() {
   
     // buy button implementation
     $buyButton.addEventListener("click", () => {
-        // reading the position of the radio button
-        function radioButtonTest(form) {
-            for (let i = 0; i < form.payment.length; i++) {
-                if (form.payment[i].checked) {
-                    radioButtonChoice = form.payment[i].value;
-                }
-            }
-        }
-        radioButtonTest($chosenCarMainForm);
-
+        
         // name and surname correctness test (2 strings separated by a space)
         function userNameTest(user) {
             return /\d/.test(user) !== true && user.trim().split(' ').length === 2 ? true : false;
@@ -260,3 +263,5 @@ function showForm() {
         }
     });
 }
+
+export default showForm;

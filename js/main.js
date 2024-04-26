@@ -1,3 +1,6 @@
+import carsArray from "./cars.js";
+import showForm from "./form.js";
+
 const $carsSearchBannerSymbolsBox = document.querySelector(".cars_search_banner_symbols_box");
 const $mainPage = document.querySelector("main");
 
@@ -5,14 +8,7 @@ const arrayOfMixedCars = carsArray.sort(() => 0.5 - Math.random());
 let $listOfCars;
 let arrayOfCarsToSort;
 
-const $chosenCarForm = document.querySelector(".chosen_car_form");
-const $nameInput = document.querySelector("#name");
-const $addressInput = document.querySelector("#address");
-const $dateInput = document.querySelector("#date");
-
-let chosenCar_id;
-let chosenCar_make_model;
-let radioButtonChoice = "";
+export { $mainPage, $listOfCars };
 
 // starting page presentation / intro
 if (sessionStorage.getItem("banner") === "started") {
@@ -51,6 +47,8 @@ function priceWithSpaces(price) {
 function mileageWithSpaces(mileage) {
     return `${mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} km`;
 }
+
+export { priceWithSpaces };
 
 function allCars(car) {
     return `
