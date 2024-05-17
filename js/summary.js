@@ -92,7 +92,7 @@ function showSummary() {
         $summaryOfPurchaseTexts.style.width = "75%";
     }
     function responsivePano () {
-        if (window.innerWidth < 1400) {
+        if (window.innerWidth < 1500) {
             if ((window.innerWidth / window.innerHeight) > 1.96) {
                 newScreenLayout();
                 $summaryOfPurchaseCarImg.style.width = "75%";
